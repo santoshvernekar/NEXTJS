@@ -8,8 +8,6 @@ const TodosForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to the backend or update the state
-    console.log('Task Title:', taskTitle);
-    console.log('Task Description:', taskDescription);
 
     // Clear the form after submission
     setTaskTitle('');

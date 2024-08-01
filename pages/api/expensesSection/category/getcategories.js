@@ -1,4 +1,4 @@
-import  ExpenseCategory  from "../../../models/CatergoriesModel";
+import  ExpenseCategory  from "../../../../models/CatergoriesModel";
 import { connectDB ,Checkauth } from "@/utils/feature";
 
 const getExpensecategories = async (req, res) => {
@@ -8,6 +8,9 @@ const getExpensecategories = async (req, res) => {
       message: "Method not allowed"
     });
   }
+  const user = await Checkauth(req);
+
+  if (!user) return errorHandler(res, 401, 'Login First');
   
   try {
     await connectDB(); 

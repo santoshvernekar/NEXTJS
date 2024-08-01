@@ -1,7 +1,7 @@
 
 import { errorHandler } from '@/middleware/error';
 import { connectDB, Checkauth } from '@/utils/feature';
-import ExpenseCategory from '../../../models/CatergoriesModel'; 
+import ExpenseCategory from '../../../../models/CatergoriesModel'; 
 
 const createExpenseCategory = async (req, res) => {
   if (req.method !== 'POST') {

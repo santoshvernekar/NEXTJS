@@ -16,7 +16,7 @@ const loginHandler = async (req, res) => {
   await connectDB();
 
   const user = await UserModel.findOne({ email }).select("+password");
-       console.log(user)
+      
   if (!user) return errorHandler(res, 400, "Invalid Email or Password");
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) return errorHandler(res, 400, "Invalid Email or Password");
