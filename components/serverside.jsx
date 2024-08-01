@@ -1,6 +1,7 @@
-import { TodoButton } from "./clientside"
+import { TodoButton } from "./clientside";
 
 export const TodoList=({title,description,id,completed})=>{
+    
     return(
         <div className="todo">
             <div>
